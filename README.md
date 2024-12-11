@@ -26,19 +26,23 @@
 
 ## Usage
 
-You have several options to use this image. I prefer "clone and compose" but "pull and run" may be easier to start with.
-
-### Pull and Run
+### Option 1: Pull and Run
 In the Windows Terminal, run:
 ```
 docker pull jmgirard/wsl-ollama
 docker run --gpus all -it -e PASSWORD=pass -p 8787:8787 jmgirard/wsl-ollama
 ```
+On Windows, use your web browser to access <http://localhost:8787>.
+In RStudio server, enter "rstudio" as username and "pass" as password.
+Modify the RStudio port and password in the `docker run` command if desired. 
 
-### Clone and compose
+### Option 2: Clone and compose
 In the Windows Terminal, run:
 ```
 git clone https://github.com/jmgirard/wsl-ollama.git
 cd wsl-ollama
 docker-compose up --build -d
 ```
+On Windows, use your web browser to access <http://localhost:8787>.
+In RStudio server, enter "rstudio" as username and "pass" as password.
+Modify the RStudio port and password in the `.env` file if desired. 

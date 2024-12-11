@@ -18,3 +18,27 @@
 ### Data Preparation
 - [data.table](https://rdatatable.gitlab.io/data.table/)
 - [tidyverse](https://www.tidyverse.org/)
+
+## Dependencies
+1. Verify that your machine's graphics card supports CUDA: <https://developer.nvidia.com/cuda-gpus>
+2. On Windows, install the latest game-ready driver from NVIDIA: <https://www.nvidia.com/Download/index.aspx#>
+3. On Windows, install the latest version of Docker Desktop: <https://www.docker.com/products/docker-desktop/>
+
+## Usage
+
+You have several options to use this image. I prefer "clone and compose" but "pull and run" may be easier to start with.
+
+### Pull and Run
+In the Windows Terminal, run:
+```
+docker pull jmgirard/wsl-ollama
+docker run --gpus all -it -e PASSWORD=pass -p 8787:8787 jmgirard/wsl-ollama
+```
+
+### Clone and compose
+In the Windows Terminal, run:
+```
+git clone https://github.com/jmgirard/wsl-ollama.git
+cd wsl-ollama
+docker-compose up --build -d
+```

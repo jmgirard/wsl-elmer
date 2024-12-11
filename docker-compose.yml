@@ -1,6 +1,6 @@
 services:
-  whisper:
-    image: jmgirard/wsl-elmer
+  ollama:
+    image: jmgirard/wsl-ollama
     ports:
       - "${RS_PORT}:8787"
     environment:

@@ -4,6 +4,8 @@ FROM rocker/tidyverse:${R_VERSION}
 
 COPY install_cuda_latest.sh install_ollama.sh /setup_scripts/
 
+ENV OLLAMA_VERSION=0.5.1
+
 RUN chmod +rxw /setup_scripts/*.sh
 RUN /setup_scripts/install_cuda_latest.sh
 RUN /setup_scripts/install_ollama.sh

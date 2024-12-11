@@ -3,7 +3,8 @@
 
 set -e
 
-curl -fsSL https://ollama.com/install.sh | sh
+OLLAMA_VERSION=${1:-${OLLAMA_VERSION}}
+curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=${OLLAMA_VERSION} sh
 
 # Build ARGs
 NCPUS=$(nproc || echo 1)

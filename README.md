@@ -1,2 +1,2 @@
-# wsl-elmer
-Dockerfile for wsl-elmer
+# wsl-ollama
+Dockerfile for wsl-ollama
